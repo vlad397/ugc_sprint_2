@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mongodb_container:
+    container_name: mongodb_container
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+      - ./script:/scripts
+volumes:
+  mongodb_data_container:
